@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import PurchaseTotal from './components/PurchaseTotal'
+import Discount from './components/Discount'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'; 
+
+export default class App extends Component {
+  state = {
+    total: 200,
+    collection: -3.85
+
+  }
+    render() {
+      return (
+        <div className="container">
+          <Container className="purchase--card">
+            <PurchaseTotal price={this.state.total.toFixed(2)}/>
+            <Discount saving={this.state.collection}/>
+          </Container> 
+        </div>
+    );
+  }
 }
-
-export default App;
