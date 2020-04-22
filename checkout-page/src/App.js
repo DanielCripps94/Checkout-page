@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import PurchaseTotal from './components/PurchaseTotal'
 import Discount from './components/Discount'
 import EstimatedTotal from './components/EstimatedTotal'
+import ItemDetails from './components/ItemDetails'
 
 import './App.css'; 
 
@@ -22,6 +23,7 @@ export default class App extends Component {
             <Discount saving={this.state.collection}/>
             <hr/>
             <EstimatedTotal price={this.state.estimatedTotal}/>
+            <ItemDetails />
           </Container> 
         </div>
     );
