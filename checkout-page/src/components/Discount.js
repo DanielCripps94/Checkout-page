@@ -27,7 +27,7 @@ export default class Discount extends Component {
                         <div style={styles.collectionSavings}>Collecion Saving</div>
                     </OverlayTrigger>
                     </Col>
-                    <Col style={styles.totalSavings}> {`$${this.props.saving}`}</Col>
+                    <Col style={styles.totalSavings}> {`£${this.props.saving}`}</Col>
                 </Row>
             </div>
         )

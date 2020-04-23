@@ -5,16 +5,26 @@ import PurchaseTotal from './components/PurchaseTotal'
 import Discount from './components/Discount'
 import EstimatedTotal from './components/EstimatedTotal'
 import ItemDetails from './components/ItemDetails'
+import ProductVoucher from './components/ProductVoucher'
 
 import './App.css'; 
 
 export default class App extends Component {
   state = {
     total: 200,
-    collection: -3.85,
-    estimatedTotal: 0
+    collection: -10.25,
+    estimatedTotal: 0,
+    disablePromoButton: false
 
   }
+
+    componentDidMount = () => {
+      this.setState({
+        
+      })
+    }
+
+
     render() {
       return (
         <div className="container">
@@ -25,6 +35,9 @@ export default class App extends Component {
             <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)}/>
             <ItemDetails price={this.state.estimatedTotal.toFixed(2)}/>
             <hr/>
+            <ProductVoucher
+            giveDiscount={ () => this.giveDiscountHandler}
+            isDisabled={this.state.disablePromoButton} />
           </Container> 
         </div>
     );
