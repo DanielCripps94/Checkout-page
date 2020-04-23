@@ -22,8 +22,9 @@ export default class App extends Component {
             <PurchaseTotal price={this.state.total.toFixed(2)}/>
             <Discount saving={this.state.collection}/>
             <hr/>
-            <EstimatedTotal price={this.state.estimatedTotal}/>
-            <ItemDetails />
+            <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)}/>
+            <ItemDetails price={this.state.estimatedTotal.toFixed(2)}/>
+            <hr/>
           </Container> 
         </div>
     );

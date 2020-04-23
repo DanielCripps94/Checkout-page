@@ -29,6 +29,17 @@ export default class ItemDetails extends Component {
                                     src="https://images-na.ssl-images-amazon.com/images/I/71MGjLfKikL._AC_SX679_.jpg"
                                     />
                                 </Media.Body>
+                                <Media.Body>
+                                    <p>Razer Blade Stealth 13 Ultrabook Laptop: Intel Core i7-8565U 4-Core, NVIDIA GeForce MX150, 13.3" FHD 1080p, 16GB RAM, 256GB SSD, CNC Aluminum, Chroma RGB Lighting, Thunderbolt 3, Black</p>
+                                    <Row className="show-grid">
+                                        <Col>
+                                        <strong>{`£${this.props.price}`}</strong>
+                                        <br />
+                                        <strong className="price-strike">{`£${this.props.price}`} </strong>
+                                        </Col>
+                                        <Col> Qty: 1</Col>
+                                    </Row>
+                                </Media.Body>
                             </Media>                           
                         </div>
                     </Collapse>
