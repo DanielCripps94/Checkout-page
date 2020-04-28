@@ -12,7 +12,7 @@ import './App.css';
 
 export default class App extends Component {
   state = {
-    total: 200,
+    total: 300,
     collection: -10.25,
     estimatedTotal: 0,
     disablePromoButton: false,
@@ -22,9 +22,16 @@ export default class App extends Component {
 
     componentDidMount = () => {
       this.setState({
-        
+        vat: (this.state.total + this.state.collection) * 0.20
+      },
+      function() {
+        this.setState({
+          estimatedTotal: (this.state.total + this.state.collection + this.state.vat)
+        })
       })
     }
+  
+
 
 
     render() {
